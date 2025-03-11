@@ -1,0 +1,56 @@
+==========Installation===================
+     >pip install django
+
+==========project creation=====
+    >django-admin startproject <project_name>
+    >cd <project_name>
+
+==========app creation=========
+    >python manage.py startapp app5 
+
+=========urls.py===============  
+   >from django.urls import path,include
+   >path('app/,',include('app5.urls'))
+
+=========difference b/w mvc mvt=======
+django template language(DTL)
+views act as controller in mvt
+
+django architechure
+ 
+....................views..............
+
+* a Python function that takes a web request and returns a web response.
+* It renders the template pages
+*handling the logic
+
+....................templates.............
+a way to generate HTML dynamically, allows separation of degin and presentation logic.
+
+.................models..........
+Django models also provide an automatically-generated database-access API, making it easy to interact with the database without writing SQL queries.
+
+................urls................
+that allows us to direct HTTP requests to the appropriate view function or class. …
+
+............framework....................
+a framework is predefined structural foundation that helps to build software applications
+helps to improve coding speed, 
+
+............django framework.............
+
+helps to build high-performance, elegant and reusable code. 
+
+............advantages..................
+
+Django’s ORM allows developers to interact with the database using Python code instead of SQL
+separation of design and logic, making it easier to manage and maintain the codebase.
+
+............models.................
+inside models.py create class and in terminal ;
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+json data
