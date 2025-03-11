@@ -25,4 +25,6 @@ urlpatterns = [
     path('filter/',student_filter,name='student_filter'),
     path('filter_update/',student_filter_update,name='student_filter_update'),
     path('filter_delete/',student_filter_delete,name='student_filter_delete'),
+    path('student_filter_value/',student_filter_value,name='student_filter_value'),
+    path('student_filter_name/',student_filter_name,name='student_filter_name'),
 ]

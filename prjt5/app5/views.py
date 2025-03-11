@@ -82,6 +82,14 @@ def student_count(request):
      }
     return render(request,'11.ormqueries.html',{'Details': data}, context)
 
+def student_filter_value(request):
+    data = student.objects.values_list('subject', flat=True).distinct()
+    return render(request,'15.ormqueries.html',{'Details': data})
+
+def student_filter_name(request):
+    data = student.objects.filter(name__icontains="amy")
+    return render(request,'15.ormqueries.html',{'Details': data})
+
 def register(request):
     if request.method == 'POST':
         rform = Regform(request.POST)
