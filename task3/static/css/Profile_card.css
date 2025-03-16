@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0,1);
+    margin: 20px;
+    background-color: rgba(177, 27, 27, 0.348);
+}
+nav{
+    background-color: rgb(78, 162, 235);
+    width: 80%;
+    height: 75px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+nav a{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+.books_main{
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+    height: auto;
+    width: 15%;
+    border: 1px solid rgba(128, 128, 128, 0.385); 
+    box-shadow: 2px 1px 2px 1px rgba(128, 128, 128, 0.218);
+}

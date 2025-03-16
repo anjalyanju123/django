@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'homepage' %}">Home</a>
+        {% if user.is_authenticated %}
+            <a href="{% url ' Profile_2' %}">Profile</a>
+            <a href="{% url 'authlogout' %}">Logout</a>
+            <a href="{% url 'book_list' %}">Books</a>
+            <a href="{% url 'add_book' %}">Add Book</a>
+        {% else %}
+            <a href="{% url 'authregister' %}">Register</a>
+            <a href="{% url 'authlogin' %}">Login</a>
+            {% endif %}
+    </nav>
+{% for i in messages %}
+{{i}}
+{% endfor %}
+    <h2>User Register</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label>First Name</label>
+        <input type="text" name="first_name"><br>
+
+        <label>Last Name</label>
+        <input type="text" name="last_name"><br>
+
+        <label>Email</label>
+        <input type="email" name="email"><br>
+
+        <label>Password</label>
+        <input type="password" name="password"><br>
+
+        <label>Confirm Password</label>
+        <input type="password" name="re-password"><br>
+
+        <label>Address:</label>
+        <input type="text" name="address"><br>
+      
+        <label>Phone:</label>
+        <input type="number" name="phone"><br>
+
+        <label>Age:</label>
+        <input type="number" name="age"><br>
+
+        <label>upload profile picture :</label>
+        <input type="file" name="upload"><br>
+
+        <input type="submit" value="register">
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'homepage' %}">Home</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'Profile_2' %}">Profile</a>
+            <a href="{% url 'authlogout' %}">Logout</a>
+            <a href="{% url 'book_list' %}">Books</a>
+            <a href="{% url 'add_book' %}">Add Book</a>
+        {% else %}
+            <a href="{% url 'authregister' %}">Register</a>
+            <a href="{% url 'authlogin' %}">Login</a>
+        {% endif %}
+    </nav>
+    <div> 
+        <h1>Add Book</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}     
+            {{form.as_p}}
+            <button type="submit">Add Book</button>
+        </form>
+
+        <div>
+            <a href="{% url 'book_list' %}">Back to Book List</a>
+        </div>
+    </div>
+</body>
+</html>

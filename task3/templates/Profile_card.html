@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Profile_card.css' %}">
+</head>
+<body>
+    <h2>Profile Details</h2>
+
+    {% for i in profile %}
+        <div class="profile-card">
+                <h2>{{i.Name}}</h2>
+                <p>Address: {{i.Address}}</p>
+                <p>Email: {{i.Email}}</p>
+                <p>Phone: {{i.Phone}}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
